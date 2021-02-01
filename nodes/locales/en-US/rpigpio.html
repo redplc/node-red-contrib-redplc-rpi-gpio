@@ -1,0 +1,62 @@
+<!--
+  Copyright 2021 Ocean (iot.redplc@gmail.com).
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<script type="text/html" data-help-name="rpigpio">
+    <p>redPlc RPI gpio Module.</p>
+    <h3><b>Input:</b></h3>
+    <dl class="message-properties">
+        <dt>payload <span class="property-type">string</span></dt>
+    </dl>
+    <h3><b>Output:</b></h3>
+    <dl class="message-properties">
+        <dt>payload <span class="property-type">string</span></dt>
+    </dl>
+    <h3><b>Variable:</b></h3>
+        <dl class="message-properties">
+            <dt>I </b><i>adr</i> Digital Input<span class="property-type">number</span></dt>
+            <dt>Q </b><i>adr</i> Digital Output<span class="property-type">number</span></dt>
+            <dd>bits 2..27 <-> GPIO2..GPIO27 </dd>
+        </dl>
+    <h3><b>Details:</b></h3>
+    <p>
+        On payload "input", gpio pins set as input<br>
+        updates <b>I</b> global variable bits.<br>
+        On payload "output", gpio pins set as output<br>
+        are updated from <b>Q</b> global variable bits.<br>
+        On startup, global variables are created.<br><br>
+        <b>GPIO modes:</b><br>
+        <ul>
+            <li><b>--:</b> Pin is untouched.<br>
+                Shows special functions.</li>
+            <li><b>input:</b> Floating input.<br>
+                Must connect to +3.3V or ground.</li>
+            <li><b>input-pulldown:</b> Input with pulldown.<br>
+                 True if connected to +3.3V.</li>
+            <li><b>input-pullup:</b> Input with pullup.<br>
+                 True if connected to ground.</li>
+            <li><b>output:</b> Output.</li>
+                Is connected to +3.3V on true.</li>
+            <li><b>output-activelow:</b> Output active low.<br>
+                Is connected to ground on true.</li>
+        </ul>
+        <p class="form-tips">
+            This node works only on Raspberry Pi.<br>
+            Check if pins set as I2C, SPI or UART.<br>
+            !! More then 3.3V damages GPIO input.<br>
+            !! Overcurrent damages GPIO output.<br>
+        </p>
+	</p>
+</script>
