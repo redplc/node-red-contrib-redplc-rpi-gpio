@@ -1,7 +1,7 @@
 {
   "name": "node-red-contrib-redplc-rpi-gpio",
-  "version": "1.0.9",
-  "description": "redPlc RPI gpio Module",
+  "version": "1.0.10",
+  "description": "Node-Red node for Raspberry Pi gpio",
 
   "dependencies": {
   },
