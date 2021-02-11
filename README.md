@@ -1,6 +1,6 @@
-# node-red-contrib-redplc-rpigpio
+# node-red-contrib-redplc-rpi-gpio
 
-Node-Red node for Raspberry Pi gpio.<br>
+Node-Red node for Raspberry Pi gpio<br>
 
 ## Node Features
 - Each gpio pin can be set as input or output
